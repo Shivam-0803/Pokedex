@@ -35,7 +35,7 @@ export function PokemonRow({ id, name, types, sprite }: PokemonRowProps) {
         p: 2,
         borderBottom: '1px solid #e0e0e0',
         cursor: 'pointer',
-        transition: 'background-color 0.15s ease',
+        transition: 'background-color 0.15s ease, box-shadow 0.15s ease',
         '&:hover': {
           backgroundColor: '#fafafa',
           boxShadow: '0 1px 3px rgba(0,0,0,0.05)',

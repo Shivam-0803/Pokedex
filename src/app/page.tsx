@@ -8,7 +8,6 @@ import {
   Button,
   Typography,
   Paper,
-  Divider,
 } from '@mui/material'
 import { trpc } from '@/lib/trpc'
 import { PokemonRow } from '@/components/PokemonRow'
@@ -66,7 +65,7 @@ export default function Home() {
             label="Pokémon Name"
             value={singleName}
             onChange={(e) => setSingleName(e.target.value)}
-            onKeyPress={(e) => {
+            onKeyDown={(e) => {
               if (e.key === 'Enter') {
                 handleSingleSearch()
               }
@@ -96,7 +95,7 @@ export default function Home() {
             label="Pokémon Names (comma-separated)"
             value={multipleNames}
             onChange={(e) => setMultipleNames(e.target.value)}
-            onKeyPress={(e) => {
+            onKeyDown={(e) => {
               if (e.key === 'Enter') {
                 handleMultipleSearch()
               }

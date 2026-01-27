@@ -9,12 +9,9 @@ import { PokedexTable } from './PokedexTable'
 export function FilterablePokedexTable() {
   const [selectedType, setSelectedType] = useState<string | undefined>()
 
-  const { data: pokemonList = [], isLoading } = trpc.pokemon.getPokemonByType.useQuery(
-    { type: selectedType },
-    {
-      enabled: true,
-    }
-  )
+  const { data: pokemonList = [], isLoading } = trpc.pokemon.getPokemonByType.useQuery({
+    type: selectedType,
+  })
 
   const skeletonRows = [1, 2, 3, 4, 5]
 
