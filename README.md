@@ -1,25 +1,16 @@
-# Pokédex App
+# 🧩 Pokédex App
 
-A web application for searching and filtering Pokémon by name or type. Built as a take-home assignment demonstrating full-stack development with Next.js, tRPC, and Prisma.
+A simple Pokédex web app to search and filter Pokémon by name or type.  
+Built using modern full-stack tools with a clean UI and a PostgreSQL backend.
 
-## Tech Stack
+---
 
-- Next.js 16 (App Router)
-- TypeScript
-- tRPC
-- Prisma ORM
-- SQLite (local development)
-- Material UI
-- React Query
+## 🚀 Live Demo
 
-## Features
+👉 https://pokedex-zeta-mauve-40.vercel.app/
 
-- Search single Pokémon by name
-- Search multiple Pokémon by comma-separated names
-- Filter Pokémon by type
-- Responsive UI with loading states
-
-## Local Setup
+---
+ ## Local Setup
 
 1. Clone the repository
 2. Install dependencies:
@@ -37,12 +28,43 @@ A web application for searching and filtering Pokémon by name or type. Built as
    ```
 5. Open [http://localhost:3000](http://localhost:3000)
 
-## Notes
 
-- The database is seeded with mock Pokémon data (15 entries)
-- Focus is on code correctness and clean implementation
-- All features are fully functional
+## ✨ Features
 
-## Deployment
+- 🔍 Search a single Pokémon by name  
+- 🧾 Search multiple Pokémon (comma-separated)  
+- 🧪 Filter Pokémon by type (fire, water, electric, etc.)  
+- 🖼️ Pokémon sprites fetched from PokéAPI assets  
+- ⚡ Fast queries using Prisma ORM  
+- ☁️ Deployed on Vercel with Neon PostgreSQL  
 
-The app can be deployed to Vercel or any platform that supports Next.js. Ensure environment variables are configured for production database if needed.
+---
+
+## 🛠️ Tech Stack
+
+**Frontend**
+- Next.js (App Router)
+- React
+- TypeScript
+- Tailwind CSS
+
+**Backend**
+- tRPC
+- Prisma ORM
+- PostgreSQL (Neon)
+
+**Deployment**
+- Vercel (production)
+- Neon (serverless Postgres)
+
+---
+
+## 📦 Database Schema
+
+```prisma
+model Pokemon {
+  id     Int    @id @default(autoincrement())
+  name   String @unique
+  types  String
+  sprite String
+}
